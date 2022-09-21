@@ -1,0 +1,56 @@
+name: Go
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - "5432:5432"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+          check-latest: true
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v3
+        if: ${{ github.ref != 'refs/heads/master' }}
+        with:
+          version: latest
+          args: -E gofmt
+
+      - name: Build
+        run: make build
+
+      - name: Configure Tests
+        run: |
+          cp ${{ github.workspace }}/.github/test-config/config.yaml .
+          go run ./cmd/main.go migrate up
+
+      - name: Test
+        run: make test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.out
+          name: go-coverage

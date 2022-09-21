@@ -1,0 +1,12 @@
+{
+  "type_definitions": [
+    {
+      "type": "group",
+      "relations": {
+        "member": {
+          "this": {}
+        }
+      }
+    }
+  ]
+}
