@@ -40,9 +40,10 @@ jobs:
       - name: Build
         run: make build
 
-      - name: Configure Tests
+      - name: Configure Example V2 Tests
         run: |
-          cp ${{ github.workspace }}/.github/test-config/config.yaml .
+          cp ${{ github.workspace }}/.github/test-config/config.yaml example/v2/config.yaml
+          cd example/v2
           go run ./cmd/main.go migrate up
 
       - name: Test

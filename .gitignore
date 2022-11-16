@@ -1,19 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/config.yaml
+/example/*/config.yaml
 /coverage.out
 /coverage.html
-
-# Compiled output
-web/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-web/node_modules
-web/npm-debug.log
-web/yarn-error.log
 
 # IDEs and editors
 .idea/
@@ -34,8 +23,6 @@ web/yarn-error.log
 .history/*
 
 # Miscellaneous
-web/.angular/cache
-.sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
@@ -45,7 +32,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-web/src/environments/environment.local.ts
-main
-kubernetes/helm/*.yaml
