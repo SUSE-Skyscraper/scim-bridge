@@ -226,8 +226,8 @@ github.com/mattn/go-isatty v0.0.12/go.mod h1:cbi8OIDigv2wuxKPP5vlRcQ1OAZbq2CE4Ky
 github.com/mattn/go-isatty v0.0.17 h1:BTarxUcIeDqL27Mc+vyvdWYSL28zpIhv3RoTdsLMPng=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
-github.com/openfga/go-sdk v0.1.1 h1:eeCs73gVb+IyJP7LAJUYitmEBTos6fI5m63wM4lT/Ps=
-github.com/openfga/go-sdk v0.1.1/go.mod h1:eNcokf21FYb6Uvx08rtDri+CuXRtLbpapQ8E3+Lbo9w=
+github.com/openfga/go-sdk v0.2.1 h1:aAZsuKF2r7XUrh00OxfGT3XI2FaNKR/w/cbgmPUS2uA=
+github.com/openfga/go-sdk v0.2.1/go.mod h1:drrrTgot7shtdwQbEYr6p/1rQsnZ87oex6QhSvZiC+Y=
 github.com/pelletier/go-toml/v2 v2.0.6 h1:nrzqCb7j9cDFj2coyLNLaZuJTLjWjlaz6nvTvIwycIU=
 github.com/pelletier/go-toml/v2 v2.0.6/go.mod h1:eumQOmlWiOPt5WriQQqoM5y18pDHwha2N+QD+EUNTek=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
