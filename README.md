@@ -6,6 +6,12 @@ The implementation is still in a rough state and is missing essential tests, but
 
 Expect major changes as this project matures.
 
+## SCIM References
+
+* V1:
+  * http://www.simplecloud.info/specs/draft-scim-core-schema-01.html
+  * http://www.simplecloud.info/specs/draft-scim-api-01.html
+
 ## Project Goals
 
 * To have a SCIM V1 and V2 bridge.
@@ -14,7 +20,7 @@ Expect major changes as this project matures.
 
 ## Development Environment
 
-Please use the example application located in the [/example/v2](./example/v2) directory for development. It serves as a sample application using SCIM bridge library and OpenFGA.
+Please use the example application located in the [example](./example) directory for development. It serves as a sample application using SCIM bridge library and OpenFGA.
 
 ### Prerequisites
 
