@@ -5,11 +5,11 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/db"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgtype"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/db"
 	"github.com/suse-skyscraper/openfga-scim-bridge/v2/database"
 	"github.com/suse-skyscraper/openfga-scim-bridge/v2/payloads"
 )

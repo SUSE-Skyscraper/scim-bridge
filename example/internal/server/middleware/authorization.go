@@ -2,10 +2,9 @@ package middleware
 
 import (
 	"fmt"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/apikeys"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
 	"net/http"
-
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/apikeys"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
 )
 
 func BearerAuthorizationHandler(app *application.App) func(next http.Handler) http.Handler {

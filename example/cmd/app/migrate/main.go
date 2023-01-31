@@ -2,12 +2,11 @@ package migrate
 
 import (
 	"embed"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
 	"log"
 
 	// we need to import the postgres drivers.
 	_ "github.com/jackc/pgx/v4/stdlib"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
-
 	"github.com/pressly/goose/v3"
 	"github.com/spf13/cobra"
 )

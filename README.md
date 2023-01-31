@@ -8,20 +8,20 @@ Expect major changes as this project matures.
 
 ## Project Goals
 
-* To have a SCIM V1 and V2 bridge.
+* To have a SCIM V2 bridge.
 * To initially cover Okta's implementation of SCIM, but eventually fulfil the entire specification.
 * To be flexible enough to allow for individual applications to implement their own business logic.
 
 ## Development Environment
 
-Please use the example application located in the [/example/v2](./example/v2) directory for development. It serves as a sample application using SCIM bridge library and OpenFGA.
+Please use the example application located in the [example](./example) directory for development. It serves as a sample application using SCIM bridge library and OpenFGA.
 
 ### Prerequisites
 
 **Local Environment:**
 
 * PostgresSQL
-* golang 1.18+
+* golang 1.19+
 * sqlc
    * `go install github.com/kyleconroy/sqlc/cmd/sqlc@latest`
 
@@ -55,17 +55,18 @@ sqlc generate
 
 ### Deploy Locally
 
-1. Ensure that you have a PostgresSQL server that you can connect to locally.
-2. Copy `config.yaml.example` to `config.yaml` and fill in the values.
-3. Build the server:
+The example application is located in the [example](example) directory.
+
+1. Copy `config.yaml.example` to `config.yaml` and fill in the values.
+2. Build the server:
    ```bash
    go build ./cmd/main.go
    ```
-4. Run database migrations:
+3. Run database migrations:
    ```bash
    go run ./cmd/main.go migrate up
    ```
-5. Run the server:
+4. Run the server:
    ```bash
    go run ./cmd/main.go server
    ```

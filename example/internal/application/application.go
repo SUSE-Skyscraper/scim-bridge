@@ -2,16 +2,16 @@ package application
 
 import (
 	"context"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/db"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/fga"
 
 	"github.com/jackc/pgx/v4/pgxpool"
 	openfga "github.com/openfga/go-sdk"
-	db2 "github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/db"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/fga"
 )
 
 type App struct {
 	Config       Config
-	Repository   db2.RepositoryQueries
+	Repository   db.RepositoryQueries
 	postgresPool *pgxpool.Pool
 	FGAClient    fga.Authorizer
 }
@@ -32,7 +32,7 @@ func (a *App) Start(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	a.Repository = db2.NewRepository(pool, database)
+	a.Repository = db.NewRepository(pool, database)
 	a.postgresPool = pool
 
 	apiClient, err := setupFGA(ctx, a.Config)
@@ -50,7 +50,7 @@ func (a *App) Shutdown(_ context.Context) {
 	}
 }
 
-func setupDatabase(ctx context.Context, config Config) (*db2.Queries, *pgxpool.Pool, error) {
+func setupDatabase(ctx context.Context, config Config) (*db.Queries, *pgxpool.Pool, error) {
 	poolConfig, err := pgxpool.ParseConfig(config.DB.GetDSN())
 	if err != nil {
 		return nil, nil, err
@@ -60,7 +60,7 @@ func setupDatabase(ctx context.Context, config Config) (*db2.Queries, *pgxpool.P
 	if err != nil {
 		return nil, nil, err
 	}
-	database := db2.New(pool)
+	database := db.New(pool)
 
 	return database, pool, nil
 }

@@ -12,7 +12,7 @@ fmt:
 	go fmt ./example/... ./v2/...
 
 build:
-	cd example/v2
+	cd example
 	go build -v ./cmd/main.go
 
 .PHONY: test
