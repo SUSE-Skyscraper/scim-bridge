@@ -3,13 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/cmd/app/migrate"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/cmd/app/scim"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/cmd/app/server"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/cmd/app/migrate"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/cmd/app/scim"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/cmd/app/server"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
 )
 
 func main() {

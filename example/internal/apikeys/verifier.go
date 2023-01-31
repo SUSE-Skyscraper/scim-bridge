@@ -5,12 +5,12 @@ import (
 	"crypto/subtle"
 	"encoding/base64"
 	"fmt"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
 	"regexp"
 	"strconv"
 	"strings"
 
 	"github.com/jackc/pgx/v4"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
 	"golang.org/x/crypto/argon2"
 )
 

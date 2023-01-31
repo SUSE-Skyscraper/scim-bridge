@@ -1,16 +1,16 @@
 package server
 
 import (
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/scimbridgedb"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/server"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/server/middleware"
 	"net/http"
 	"time"
 
 	"github.com/go-chi/chi/v5"
 	chimiddleware "github.com/go-chi/chi/v5/middleware"
 	"github.com/spf13/cobra"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/scimbridgedb"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/server"
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/server/middleware"
 	"github.com/suse-skyscraper/openfga-scim-bridge/v2/bridge"
 	"github.com/suse-skyscraper/openfga-scim-bridge/v2/router"
 )

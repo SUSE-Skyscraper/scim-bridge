@@ -4,8 +4,8 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
+	"github.com/suse-skyscraper/openfga-scim-bridge/example/internal/application"
 
-	"github.com/suse-skyscraper/openfga-scim-bridge/example/v2/internal/application"
 	"golang.org/x/crypto/argon2"
 )
 
