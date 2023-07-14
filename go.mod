@@ -3,7 +3,7 @@ module github.com/suse-skyscraper/openfga-scim-bridge
 go 1.18
 
 require (
-	github.com/go-chi/chi/v5 v5.0.8
+	github.com/go-chi/chi/v5 v5.0.10
 	github.com/go-chi/render v1.0.2
 	github.com/google/uuid v1.3.0
 	github.com/jackc/pgconn v1.14.0
